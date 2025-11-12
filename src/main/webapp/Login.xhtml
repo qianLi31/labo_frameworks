@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+    
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html"
@@ -13,8 +14,8 @@
 
 	<h:body>
 		<h:form>
-			<h3>Mesedez, sartu izena eta pasahitza (1 eta 500-en arteko
-				zenbakia)</h3>
+			<h3>Mesedez, sartu izena eta pasahitza (1 eta 500-en arteko	zenbakia)
+			</h3>
 			<table>
 				<tr>
 					<td>Izena:</td>
@@ -33,15 +34,13 @@
 				</tr>
 				<tr>
 					<td>Data (PrimeFaces-ekin):</td>
-					<td><p:calendar id="data" value="#{login.data}"
-							navigator="true" mode="popup">
-						</p:calendar></td>
+					<td><p:calendar id="data" value="#{Login.data}" navigator="true" mode="popup" /></td>
 				</tr>
 			</table>
 			<p>
+				<h:commandButton value="Onartu" action="#{Login.egiaztatu}" />
 				<h:commandButton value="Pirata" action="error" immediate="true"
 					onclick="if (!confirm('Ziur zaude?')) return false" />
-				<h:commandButton value="Onartu" action="#{Login.egiaztatu}" />
 			</p>
 
 			<h:messages style="color:blue" />
