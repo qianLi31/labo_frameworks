@@ -15,7 +15,7 @@ import jakarta.faces.event.AjaxBehaviorEvent;
 import jakarta.inject.Named;
 
 @Named("Login")  // Debe coincidir exactamente con #{Login.izena}
-@ApplicationScoped
+@SessionScoped
 public class LoginBean implements Serializable {
 	private String izena;
 	private String pasahitza;
